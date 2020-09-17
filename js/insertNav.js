@@ -1,5 +1,6 @@
 (function () {
-	const title = document.querySelector("title").innerText;
+	const fullTitle = document.querySelector("title").innerText;
+	const title = fullTitle.replace(' - Moroccan Adventures', '')
 	const navBar = document.querySelector(".navbar");
 	const srOnly = '<span class="sr-only">(current)</span>';
 
@@ -7,7 +8,7 @@
 		const navList = document.getElementsByClassName("navbar-nav")[0].children;
 
 		for (i = 0; i < navList.length; i++) {
-			if (navList[i].innerHTML.includes(title)) {
+			if (title.includes(navList[i].innerText)) {
 				navList[i].innerHTML =
 					'<a class="nav-link" href="#">' + title + " " + srOnly + "</a>";
 				navList[i].classList = "nav-item highlight";
