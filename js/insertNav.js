@@ -8,7 +8,7 @@
 		const navList = document.getElementsByClassName("navbar-nav")[0].children;
 
 		for (i = 0; i < navList.length; i++) {
-			if (title.includes(navList[i].innerText)) {
+			if (navList[i].innerHTML.includes(title)) {
 				navList[i].innerHTML =
 					'<a class="nav-link" href="#">' + title + " " + srOnly + "</a>";
 				navList[i].classList = "nav-item highlight";
