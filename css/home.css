@@ -7,30 +7,55 @@ header {
     background-position: center;
 }
 
-.erg-chebbi, .ait-benhaddou, .chefchaouen {
+.erg-chebbi, 
+.ait-benhaddou, 
+.chefchaouen {
     width: 444.44px;
     height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     margin: auto;
     margin-bottom: 4rem;
     border-radius: 10%;
     box-shadow: 6px 6px 120px 10px rgba(0,0,0,0.75) inset,
                 -6px -6px 120px 10px rgba(0,0,0,0.75) inset, 
                 3px 3px 3px rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
 }
 
-.erg-chebbi {
+.erg-chebbi::before, 
+.ait-benhaddou::before, 
+.chefchaouen::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: -1;
+    transform: translateZ(0px);
+}
+
+.erg-chebbi::before {
     background-image: url("../images/erg-header.jpg");
 }
 
-.ait-benhaddou {
+.ait-benhaddou::before {
     background-image: url("../images/ait-header.jpg");
 }
 
-.chefchaouen {
+.chefchaouen::before {
     background-image: url("../images/chef-header.jpg");
+}
+
+.erg-chebbi:hover::before, 
+.ait-benhaddou:hover::before, 
+.chefchaouen:hover::before,
+.erg-chebbi:focus-within::before, 
+.ait-benhaddou:focus-within::before, 
+.chefchaouen:focus-within::before {
+    transform: scale(1.3);
 }
 
 /* Home Page Links */
@@ -43,9 +68,11 @@ header {
     justify-items: center;
     align-items: center;
     text-shadow: 2px 2px 2px var(--accent);
+    transition: all .5s;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
     color: var(--accent);
     text-decoration: none;
 }
