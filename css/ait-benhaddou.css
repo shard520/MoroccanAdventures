@@ -6,3 +6,37 @@ header {
     background-size: cover;
     background-position: center;
 }
+
+/* Film List */
+.film-list {
+    column-count: 2;
+    padding-top: 2rem;
+}
+
+.film-list__item {
+    margin: 1rem;
+    list-style: none;
+    position: relative;
+}
+
+.film-list__item:first-of-type {
+    margin-top: 0;
+}
+
+.film-list__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem; 
+    background-image: url(../images/Moroccan-Star.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0.08rem;
+    left: -1.5rem;
+}
+
+@media (max-width: 600px) {
+    .film-list {
+        column-count: 1;
+    }
+}
