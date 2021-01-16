@@ -1,0 +1,29 @@
+{
+  "name": "moroccan-adentures-v2",
+  "version": "2.0.0",
+  "description": "Moroccan Adventures Site v2",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"defaults\" css/main.comp.css -o css/main.prefix.css",
+    "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shard520/MoroccanAdventures.git"
+  },
+  "author": "shard520",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shard520/MoroccanAdventures/issues"
+  },
+  "homepage": "https://github.com/shard520/MoroccanAdventures#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.1",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1"
+  }
+}
