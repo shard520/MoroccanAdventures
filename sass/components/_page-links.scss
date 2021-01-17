@@ -1,0 +1,84 @@
+.page-links {
+	margin: 1.5rem auto;
+	padding: 1.5rem;
+
+	&__container {
+		width: 44.44rem;
+		height: 25rem;
+		margin: auto;
+		margin-bottom: 4rem;
+		border-radius: 10%;
+		box-shadow: .6rem .6rem 12rem 1rem rgba(var(--black-color),.75) inset,
+					-.6rem -.6rem 12rem 1rem rgba(var(--black-color),.75) inset, 
+					.3rem .3rem .3rem rgba(var(--black-color),.5);
+		overflow: hidden;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			transition: all .5s;
+			z-index: -1;
+			transform: translateZ(0px);
+		}
+
+		&--erg-chebbi {
+			&::before {
+				background-image: url("../../images/erg-header.jpg");
+			}
+		}
+
+		&--ait-benhaddou {
+			&::before {
+				background-image: url("../../images/ait-header.jpg");
+			}
+		}
+
+		&--chefchaouen {
+			&::before {
+				background-image: url("../../images/chef-header.jpg");
+			}
+		}
+
+		&:hover::before {
+			transform: scale(1.3);
+		}
+	}
+
+	&__link {
+		&:link {
+			color: var(--white-color);
+			width: 100%;
+			display: grid;
+			height: 100%;
+			font-family: $font-display;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 3rem;
+			justify-items: center;
+			align-items: center;
+			text-shadow: .2rem .2rem .2rem var(--light-grey-accent);
+			transition: all .5s;
+		}
+
+		&:visited {
+			color: var(--black-grey-accent);
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--dark-grey-accent);
+			text-decoration: none;	
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+	
+}

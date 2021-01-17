@@ -1,0 +1,13 @@
+.header {
+    width: 100%;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	
+	&--home {
+		background-image: url("../../images/home-header.jpg");
+	}
+}

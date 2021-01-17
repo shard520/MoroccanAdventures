@@ -1,0 +1,9 @@
+.intro {
+	width: 85%;
+	margin: 1.5rem auto;
+	padding: 1.5rem;
+
+	&__text {
+		font-size: $default-font-size;
+	}
+}

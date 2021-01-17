@@ -1,0 +1,127 @@
+.intro {
+  width: 85%;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+}
+.intro__text {
+  font-size: 1.6rem;
+}
+
+.page-links {
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+}
+.page-links__container {
+  width: 44.44rem;
+  height: 25rem;
+  margin: auto;
+  margin-bottom: 4rem;
+  border-radius: 10%;
+  box-shadow: 0.6rem 0.6rem 12rem 1rem rgba(var(--black-color), 0.75) inset, -0.6rem -0.6rem 12rem 1rem rgba(var(--black-color), 0.75) inset, 0.3rem 0.3rem 0.3rem rgba(var(--black-color), 0.5);
+  overflow: hidden;
+  position: relative;
+}
+.page-links__container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translateZ(0px);
+}
+.page-links__container--erg-chebbi::before {
+  background-image: url("../../images/erg-header.jpg");
+}
+.page-links__container--ait-benhaddou::before {
+  background-image: url("../../images/ait-header.jpg");
+}
+.page-links__container--chefchaouen::before {
+  background-image: url("../../images/chef-header.jpg");
+}
+.page-links__container:hover::before {
+  transform: scale(1.3);
+}
+.page-links__link:link {
+  color: var(--white-color);
+  width: 100%;
+  display: grid;
+  height: 100%;
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3rem;
+  justify-items: center;
+  align-items: center;
+  text-shadow: 0.2rem 0.2rem 0.2rem var(--light-grey-accent);
+  transition: all 0.5s;
+}
+.page-links__link:visited {
+  color: var(--black-grey-accent);
+}
+.page-links__link:hover, .page-links__link:focus {
+  color: var(--dark-grey-accent);
+  text-decoration: none;
+}
+.page-links__link:focus {
+  outline: none;
+}
+
+:root {
+  --primary-color: #edc9af;
+  --secondary-color: #afd3ed;
+  --flag-red-color: #c1272d;
+  --flag-green-color: #006233;
+  --light-grey-accent: #d3d3d3;
+  --dark-grey-accent: #7a7673;
+  --black-color: #3B3937;
+  --white-color: #fbf3ed;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--black-color);
+  background-color: var(--primary-color);
+}
+
+.heading-1 {
+  font-family: "Bitter", serif;
+  font-size: 4.5rem;
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+.header {
+  width: 100%;
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+.header--home {
+  background-image: url("../../images/home-header.jpg");
+}
+
+/*# sourceMappingURL=file:///Users/RedshiftSound/Google%20Drive/Web%20Development/portfolio-sites/moroccan-adventures-mac/MoroccanAdventures/dev/css/main.css.map *//*# sourceMappingURL=main.css.map */

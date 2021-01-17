@@ -1,3 +1,17 @@
+:root {
+	--primary-color: #edc9af;
+	--secondary-color: #afd3ed;
+
+	--flag-red-color: #c1272d;
+	--flag-green-color: #006233;
+
+	--light-grey-accent: #d3d3d3;
+	--dark-grey-accent: #7a7673;
+
+	--black-color: #3B3937;
+	--white-color: #fbf3ed;
+}
+
 *,
 *::after,
 *::before {
@@ -12,4 +26,9 @@ html {
 
 body {
 	box-sizing: border-box;
+	font-family: $font-primary;
+	font-weight: 300;
+	line-height: 1.6;
+	color: var(--black-color);
+	background-color: var(--primary-color);
 }
