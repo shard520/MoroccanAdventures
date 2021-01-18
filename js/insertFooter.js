@@ -3,7 +3,7 @@
 	const year = new Date().getFullYear();
 
 	footer.innerHTML = `
-	<p>Copyright &copy; ${year} <a href="https://github.com/shard520/MoroccanAdventures" class="footer__link">Simon Hardacre</a></p>
+	<p class="footer__text">Copyright &copy; ${year} <a href="https://github.com/shard520/MoroccanAdventures" class="footer__link">Simon Hardacre</a></p>
 	`
 }());	
 	

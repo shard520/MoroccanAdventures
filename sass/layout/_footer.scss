@@ -1,0 +1,24 @@
+.footer {
+	padding: 1.5rem;
+	background-color: var(--light-grey-accent);
+	font-size: $default-font-size;
+
+	&__text {
+		text-align: center;
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+		color: inherit;
+		font-style: italic;
+		text-decoration: none;
+		transition: all .2s;
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--white-color);
+		}
+	}
+}

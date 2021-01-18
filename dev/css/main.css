@@ -1,5 +1,5 @@
 .intro {
-  width: 85%;
+  width: 80%;
   margin: 1.5rem auto;
   padding: 1.5rem;
 }
@@ -17,7 +17,7 @@
   margin: auto;
   margin-bottom: 4rem;
   border-radius: 10%;
-  box-shadow: 0.6rem 0.6rem 12rem 1rem rgba(var(--black-color), 0.75) inset, -0.6rem -0.6rem 12rem 1rem rgba(var(--black-color), 0.75) inset, 0.3rem 0.3rem 0.3rem rgba(var(--black-color), 0.5);
+  box-shadow: 0.6rem 0.6rem 12rem 1rem rgba(var(--black-color-rgb), 0.75) inset, -0.6rem -0.6rem 12rem 1rem rgba(var(--black-color-rgb), 0.75) inset, 0.3rem 0.3rem 0.3rem rgba(var(--black-color-rgb), 0.5);
   overflow: hidden;
   position: relative;
 }
@@ -42,29 +42,27 @@
 .page-links__container--chefchaouen::before {
   background-image: url("../../images/chef-header.jpg");
 }
-.page-links__container:hover::before {
+.page-links__container:hover::before, .page-links__container:focus-within::before {
   transform: scale(1.3);
 }
-.page-links__link:link {
+.page-links__link:link, .page-links__link:visited {
   color: var(--white-color);
   width: 100%;
-  display: grid;
   height: 100%;
+  display: grid;
+  place-items: center;
   font-family: "Bitter", serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: italic;
-  font-size: 3rem;
-  justify-items: center;
-  align-items: center;
-  text-shadow: 0.2rem 0.2rem 0.2rem var(--light-grey-accent);
+  font-size: 5rem;
+  text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 0.2rem var(--light-grey-accent);
   transition: all 0.5s;
 }
-.page-links__link:visited {
-  color: var(--black-grey-accent);
-}
 .page-links__link:hover, .page-links__link:focus {
-  color: var(--dark-grey-accent);
-  text-decoration: none;
+  color: var(--light-grey-accent);
+  text-shadow: 0.1rem 0.1rem 0.2rem var(--dark-grey-accent);
+  transform: scale(1.05);
 }
 .page-links__link:focus {
   outline: none;
@@ -72,13 +70,21 @@
 
 :root {
   --primary-color: #edc9af;
+  --primary-color-rgb: 237, 201, 175;
   --secondary-color: #afd3ed;
+  --secondary-color-rgb: 175, 211, 237;
   --flag-red-color: #c1272d;
+  --flag-red-color-rgb: 193, 39, 45;
   --flag-green-color: #006233;
+  --flag-green-color-rgb: 0, 98, 51;
   --light-grey-accent: #d3d3d3;
+  --light-grey-accent-rgb: 211, 211, 211;
   --dark-grey-accent: #7a7673;
+  --dark-grey-accent-rgb: 122, 118, 115;
   --black-color: #3B3937;
+  --black-color-rgb: 59, 57, 55;
   --white-color: #fbf3ed;
+  --white-color-rgb: 251, 243, 237;
 }
 
 *,
@@ -96,7 +102,7 @@ html {
 body {
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   color: var(--black-color);
   background-color: var(--primary-color);
@@ -104,16 +110,35 @@ body {
 
 .heading-1 {
   font-family: "Bitter", serif;
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: 200;
   font-style: italic;
   text-align: center;
+  color: var(--white-color);
   padding: 2rem;
+}
+
+.footer {
+  padding: 1.5rem;
+  background-color: var(--light-grey-accent);
+  font-size: 1.6rem;
+}
+.footer__text {
+  text-align: center;
+}
+.footer__link:link, .footer__link:visited {
+  color: inherit;
+  font-style: italic;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.footer__link:hover, .footer__link:focus {
+  color: var(--white-color);
 }
 
 .header {
   width: 100%;
-  height: 20vh;
+  height: 20rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

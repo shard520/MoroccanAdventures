@@ -1,15 +1,24 @@
 :root {
+	// colors labelled rgb to be used in rgba() when transparency is needed
 	--primary-color: #edc9af;
+	--primary-color-rgb: 237, 201, 175;
 	--secondary-color: #afd3ed;
+	--secondary-color-rgb: 175, 211, 237;
 
 	--flag-red-color: #c1272d;
+	--flag-red-color-rgb: 193, 39, 45;
 	--flag-green-color: #006233;
+	--flag-green-color-rgb: 0, 98, 51;
 
 	--light-grey-accent: #d3d3d3;
+	--light-grey-accent-rgb: 211, 211, 211;
 	--dark-grey-accent: #7a7673;
+	--dark-grey-accent-rgb: 122, 118, 115;
 
 	--black-color: #3B3937;
+	--black-color-rgb: 59, 57, 55;
 	--white-color: #fbf3ed;
+	--white-color-rgb: 251, 243, 237;
 }
 
 *,
@@ -27,7 +36,7 @@ html {
 body {
 	box-sizing: border-box;
 	font-family: $font-primary;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.6;
 	color: var(--black-color);
 	background-color: var(--primary-color);
