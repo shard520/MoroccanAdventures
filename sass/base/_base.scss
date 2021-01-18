@@ -41,3 +41,11 @@ body {
 	color: var(--black-color);
 	background-color: var(--primary-color);
 }
+
+.sr-only {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+	display: block;
+	position: absolute;
+}

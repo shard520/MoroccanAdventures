@@ -49,6 +49,7 @@
   color: var(--white-color);
   width: 100%;
   height: 100%;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   font-family: "Bitter", serif;
@@ -108,6 +109,14 @@ body {
   background-color: var(--primary-color);
 }
 
+.sr-only {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  display: block;
+  position: absolute;
+}
+
 .heading-1 {
   font-family: "Bitter", serif;
   font-size: 5rem;
@@ -149,4 +158,54 @@ body {
   background-image: url("../../images/home-header.jpg");
 }
 
-/*# sourceMappingURL=file:///Users/RedshiftSound/Google%20Drive/Web%20Development/portfolio-sites/moroccan-adventures-mac/MoroccanAdventures/dev/css/main.css.map *//*# sourceMappingURL=main.css.map */
+.navigation {
+  background-color: var(--light-grey-accent);
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+.navigation__list {
+  display: flex;
+  justify-content: center;
+}
+.navigation__item {
+  list-style: none;
+}
+.navigation__link:link, .navigation__link:visited, .navigation__dropdown-link:link, .navigation__dropdown-link:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin: 1rem 2rem;
+}
+.navigation__link:hover, .navigation__link:focus, .navigation__dropdown-link:hover, .navigation__dropdown-link:focus {
+  color: var(--white-color);
+  transform: translateY(-0.2rem);
+}
+.navigation__link:focus, .navigation__dropdown-link:focus {
+  outline: none;
+}
+.navigation__link.navigation__link--highlight, .navigation__link.navigation__dropdown-link--highlight, .navigation__dropdown-link.navigation__link--highlight, .navigation__dropdown-link.navigation__dropdown-link--highlight {
+  color: var(--white-color);
+  text-decoration: underline;
+  cursor: default;
+}
+.navigation__checkbox {
+  display: none;
+}
+.navigation__button {
+  display: none;
+}
+.navigation__icon {
+  display: none;
+}
+.navigation__dropdown-menu {
+  display: none;
+}
+.navigation__dropdown-list {
+  display: none;
+}
+.navigation__dropdown-item {
+  display: none;
+}
+.navigation__dropdown-link {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
