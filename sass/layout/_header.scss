@@ -6,6 +6,8 @@
 	background-position: center;
 	display: flex;
 	justify-content: center;
+	position: relative;
+	z-index: 200;
 	
 	&--home {
 		background-image: url("../../images/home-header.jpg");

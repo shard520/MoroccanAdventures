@@ -6,13 +6,17 @@
 		width: 44.44rem;
 		height: 25rem;
 		margin: auto;
-		margin-bottom: 4rem;
+		margin-bottom: 6rem;
 		border-radius: 10%;
 		box-shadow: .6rem .6rem 12rem 1rem rgba(var(--black-color-rgb),.75) inset,
 					-.6rem -.6rem 12rem 1rem rgba(var(--black-color-rgb),.75) inset, 
 					.3rem .3rem .3rem rgba(var(--black-color-rgb),.5);
 		overflow: hidden;
 		position: relative;
+
+		&:last-child {
+			margin-bottom: 3rem;
+		}
 
 		&::before {
 			content: "";
