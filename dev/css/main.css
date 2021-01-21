@@ -180,10 +180,10 @@ body {
 }
 .navigation__link:link, .navigation__link:visited {
   font-size: 1.6rem;
+  margin: 1rem 2rem;
   color: inherit;
   text-decoration: none;
   transition: all 0.2s;
-  margin: 1rem 2rem;
 }
 .navigation__link:hover, .navigation__link:focus {
   color: var(--white-color);
@@ -218,23 +218,21 @@ body {
     position: absolute;
   }
   .navigation__button {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-area: 1/1/span 1/span 1;
     width: 3rem;
     height: 100%;
     position: relative;
     cursor: pointer;
     display: block;
-    z-index: 101;
-    padding: 2rem 1rem;
-    margin-left: 1rem;
+    padding: 2rem 0;
+    margin-right: 2rem;
     background-color: var(--light-grey-accent);
+    transition: all 0.2s;
   }
   .navigation__button:focus {
     outline: none;
+  }
+  .navigation__button:hover > *, .navigation__button:hover > *::before, .navigation__button:hover > *::after, .navigation__button:focus > *, .navigation__button:focus > *::before, .navigation__button:focus > *::after {
+    background-color: var(--black-color);
   }
   .navigation__icon {
     border: none;
@@ -257,7 +255,7 @@ body {
     display: block;
     position: absolute;
     z-index: 101;
-    transition: transform 0.3s;
+    transition: all 0.3s;
   }
   .navigation__icon::before {
     transform: translateY(-0.9rem);
@@ -271,21 +269,18 @@ body {
   .navigation__title {
     font-size: 2rem;
     font-family: "Bitter", serif;
-    padding: 0.5rem;
-    text-align: right;
-    line-height: 2;
     flex: 1;
     background-color: var(--light-grey-accent);
     height: 100%;
-    padding: 0.5rem 1.5rem;
+    padding: 1.5rem 2rem;
     position: relative;
     z-index: 100;
   }
   .navigation__menu {
-    transform: translateY(-120%);
+    transform: translateY(-125%);
     position: absolute;
     left: 0;
-    top: 4rem;
+    top: 5rem;
     width: 100vw;
     background-color: var(--light-grey-accent);
     z-index: 99;
@@ -293,13 +288,16 @@ body {
   }
   .navigation__list {
     flex-direction: column;
-    padding: 0 0.8rem 0.8rem;
+    padding: 0 2rem;
   }
   .navigation__link:link, .navigation__link:visited {
     margin: unset;
   }
   .navigation__item {
-    padding: 0.75rem 0;
+    padding: 1rem 0;
+  }
+  .navigation__item:last-child {
+    padding-bottom: 2rem;
   }
   .navigation__checkbox:checked ~ .navigation__button .navigation__icon {
     background-color: transparent;
@@ -307,12 +305,13 @@ body {
   .navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
     top: 0;
     transform: rotate(135deg);
-    margin-left: -0.4rem;
   }
   .navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
     top: 0;
     transform: rotate(-135deg);
-    margin-left: -0.4rem;
+  }
+  .navigation__checkbox:checked ~ .navigation__button {
+    margin-right: 1.5rem;
   }
   .navigation__checkbox:checked ~ .navigation__menu {
     transform: translateY(0);
