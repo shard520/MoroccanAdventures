@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact - Moroccan Adventures</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet"> 
+	
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="./dev/css/main.css" type="text/css">
+</head>
+<body>
+	<header class="header header--home">
+		<h1 class="heading-1">Contact Us</h1>
+	</header>
+	<div class="navigation" aria-label="Site navigation">
+	</div>
+	<script src="js/insertNav.js"></script>
+	<main class="main">
+		<article class="article">
+			<section class="intro" aria-label="page introduction text">
+				<p class="intro__text u-center-text">
+				Please feel free to get in touch if you want to ask any questions
+				or would like to use any of the images.
+				</p>
+			</section>
+			<section class="form__container">
+				<form action="https://usebasin.com/f/e8ef24c3364e" class="form">
+					<div class="form__group">
+						<input 
+							type="text" 
+							class="form__input" 
+							placeholder="Your Name" 
+							id="name" 
+							name="name"
+						>
+						<label for="name" class="form__label">Your Name</label>
+					</div>
+					<div class="form__group">
+						<input 
+							type="email" 
+							class="form__input" 
+							placeholder="Email Address" 
+							id="email" 
+							name="email"
+							required
+						>
+						<label for="email" class="form__label">Email Address</label>
+						<small class="form__small-text">
+							We'll never share your email with anyone else, or send any newsletters.
+						</small>
+					</div>
+					<div class="form__group">
+						<textarea 
+							class="form__input form__input--text-area"
+							id="message"
+							name="message" 
+							rows="6"
+							placeholder="Your Message"
+						></textarea>
+						<label for="message" class="form__label form__label--text-area">Your Message</label>	
+					</div>
+					<div class="form__group">
+						<button class="btn btn--white" type="submit">Submit</button>
+					</div>
+				</form>
+			</section>
+		</article>
+	</main>
+	<footer class="footer"></footer>
+	<script src="./js/insertFooter.js"></script>
+</body>
+</html>

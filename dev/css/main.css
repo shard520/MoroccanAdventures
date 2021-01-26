@@ -130,6 +130,10 @@ body {
   padding: 2rem;
 }
 
+.u-center-text {
+  text-align: center !important;
+}
+
 .footer {
   padding: 1.5rem;
   background-color: var(--light-grey-accent);
