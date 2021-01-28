@@ -1,0 +1,94 @@
+.form {
+	&__container {
+		width: $page-width;
+		margin: 1.5rem auto;
+		padding: 1.5rem;
+	}
+
+	&__group {
+		margin: auto;
+		width: 80%;
+		padding: 1.5rem;
+		position: relative;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			margin: 2.2rem auto 1rem;
+		}
+	}
+
+	&__input {
+		font-size: $default-font-size;
+		font-family: inherit;
+		background-color: var(--white-color);
+		color: inherit;
+		padding: 1.5rem 2rem;
+		width: 100%;
+		border-radius: 1rem;
+		border: none;
+		display: block;
+		border-bottom: .2rem solid transparent; // Prevent box resizing when applying focus styling
+		border-top: .2rem solid transparent; // Offset border bottom to center text vertically
+		transition: all .3s;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba(var(--black-color-rgb), .25);
+		}
+
+		&:focus:valid {
+			border-bottom: .3rem solid var(--flag-green-color);
+		}
+
+		&:focus:invalid {
+			border-bottom: .3rem solid var(--flag-red-color);
+		}
+
+		&:focus:optional {
+			border-bottom: .2rem solid var(--primary-color);
+		}
+		
+		&::placeholder {
+		color: var(--dark-grey-accent);
+		}
+
+	}
+
+	&__label {
+		font-size: $default-font-size;
+		margin-left: 2rem;
+		display: block;
+		color: inherit;
+		transition: all .3s;
+		transform: translateY(-8rem); //position labels above input field
+
+		&--textarea {
+			// Position absolute to ensure label is correctly positioned if textarea is resized
+			position: absolute;
+			top: 0;
+			transform: translateY(-1.4rem);
+		}
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0; // hide labels when placeholder text is visible
+		visibility: hidden;
+		transform: translateY(-4rem);
+	}
+
+	&__input--textarea:placeholder-shown + &__label--textarea {
+		opacity: 0; // hide labels when placeholder text is visible
+		visibility: hidden;
+		transform: translateY(2.5rem);
+	}
+
+	&__small-text {
+		margin-left: 2rem;
+		position: absolute;
+		top: 6.7rem;
+		font-size: 1rem;
+	}
+}

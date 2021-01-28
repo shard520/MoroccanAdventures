@@ -1,0 +1,33 @@
+.btn {
+	font-size: 2rem;
+	padding: 1.5rem 6rem;
+	border-radius: 1rem;
+	border: none;
+	cursor: pointer;
+	transition: all .2s;
+	
+	&--white {
+		background-color: var(--white-color);
+		color: inherit;
+	}
+
+	// btn wrrapped in trigger div to prevent jerky hover animation when mouse is on the edge of the element
+	&__trigger {
+		display: inline-block;
+	}
+
+	&__trigger:hover > .btn, 
+	&:focus {
+		box-shadow: 0 1rem 2rem rgba(var(--black-color-rgb), .25);
+		transform: translateY(-1rem);
+	}
+
+	&__trigger > .btn:active {
+		box-shadow: 0 .5rem 1rem rgba(var(--black-color-rgb), .5);
+		transform: translateY(-.5rem);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

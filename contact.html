@@ -21,7 +21,7 @@
 	</header>
 	<div class="navigation" aria-label="Site navigation">
 	</div>
-	<script src="js/insertNav.js"></script>
+	<script src="./js/insertNav.js"></script>
 	<main class="main">
 		<article class="article">
 			<section class="intro" aria-label="page introduction text">
@@ -31,7 +31,7 @@
 				</p>
 			</section>
 			<section class="form__container">
-				<form action="https://usebasin.com/f/e8ef24c3364e" class="form">
+				<form action="https://usebasin.com/f/e8ef24c3364e" class="form" method="POST">
 					<div class="form__group">
 						<input 
 							type="text" 
@@ -58,16 +58,20 @@
 					</div>
 					<div class="form__group">
 						<textarea 
-							class="form__input form__input--text-area"
+							class="form__input form__input--textarea"
 							id="message"
 							name="message" 
-							rows="6"
+							rows="8"
 							placeholder="Your Message"
+							draggable="false"
 						></textarea>
-						<label for="message" class="form__label form__label--text-area">Your Message</label>	
+						<label for="message" class="form__label form__label--textarea">Your Message</label>	
 					</div>
+					<input type="hidden" name="hp_field">
 					<div class="form__group">
-						<button class="btn btn--white" type="submit">Submit</button>
+						<div class="btn__trigger">
+							<button class="btn btn--white" type="submit">Submit</button>
+						</div>
 					</div>
 				</form>
 			</section>

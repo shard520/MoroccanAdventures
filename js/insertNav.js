@@ -28,7 +28,7 @@
 	<nav class="navigation__menu">
 		<ul class="navigation__list">
 			<li class="navigation__item">
-				<a href="index.html" class="navigation__link navigation__link--highlight">Home</a>
+				<a href="index.html" class="navigation__link">Home</a>
 			</li>
 			<li class="navigation__item">
 				<a href="erg-chebbi.html" class="navigation__link">Erg Chebbi</a>
