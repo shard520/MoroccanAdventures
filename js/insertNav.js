@@ -31,10 +31,10 @@
 				<a href="index.html" class="navigation__link">Home</a>
 			</li>
 			<li class="navigation__item">
-				<a href="erg-chebbi.html" class="navigation__link">Erg Chebbi</a>
+				<a href="erg_chebbi.html" class="navigation__link">Erg Chebbi</a>
 			</li>
 			<li class="navigation__item">
-				<a href="ait-benhaddou.html" class="navigation__link">Aït Benhaddou</a>
+				<a href="ait_benhaddou.html" class="navigation__link">Aït Benhaddou</a>
 			</li>
 			<li class="navigation__item">
 				<a href="chefchaouen.html" class="navigation__link">Chefchaouen</a>

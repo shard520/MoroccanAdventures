@@ -7,7 +7,7 @@ magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname
 
 // convert all jpg files to various predefined widths with quality set to 70
 // number output file names sequentially with 2 digits starting from 01
-// strip metadata add width to file name and put them in relevant folder
+// strip metadata, add width to file name and put them in relevant folder
 magick convert -scene 1 *.JPG -quality 70 -resize 2000 '2000/%02d_2000w.jpg';
 magick convert -scene 1 *.JPG -quality 70 -resize 1000 '1000/%02d_1000w.jpg';
 magick convert -scene 1 *.JPG -quality 70 -resize 500 '500/%02d_500w.jpg';

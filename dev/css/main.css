@@ -136,6 +136,50 @@
 .intro__text {
   font-size: 1.6rem;
 }
+.intro__text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.landscape-gallery {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+.landscape-gallery__item {
+  display: flex;
+  position: relative;
+  margin: 0;
+}
+.landscape-gallery__item::before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  padding-bottom: calc(2/3 * 100%);
+}
+.landscape-gallery__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+  border-radius: 2rem;
+}
+.landscape-gallery__caption {
+  display: none;
+}
+.landscape-gallery__link {
+  display: none;
+}
 
 .page-links {
   margin: 1.5rem auto;
@@ -294,6 +338,9 @@ body {
 }
 .header--home {
   background-image: url("../../images/home-header.jpg");
+}
+.header--erg-chebbi {
+  background-image: url("../../img/jpg/headers/1080/erg_header_2000w.jpg");
 }
 
 .navigation {
