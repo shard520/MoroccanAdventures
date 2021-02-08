@@ -10,15 +10,15 @@
 	--flag-green-color: #006233;
 	--flag-green-color-rgb: 0, 98, 51;
 
-	--light-grey-accent: #d3d3d3;
-	--light-grey-accent-rgb: 211, 211, 211;
+	--light-grey-accent: #c8c8c8;
+	--light-grey-accent-rgb: 200, 200, 200;
 	--dark-grey-accent: #7a7673;
 	--dark-grey-accent-rgb: 122, 118, 115;
 
 	--black-color: #3B3937;
 	--black-color-rgb: 59, 57, 55;
-	--white-color: #fbf3ed;
-	--white-color-rgb: 251, 243, 237;
+	--white-color: #fff8f2;
+	--white-color-rgb: 255, 248, 242;
 }
 
 *,
@@ -31,6 +31,16 @@
 
 html {
 	font-size: 62.5%; // 1rem = 10px
+
+	// Retina screens and 4k - 2880-3840px
+	@media only screen and (min-width: 180em) and (max-width: 240em) {
+		font-size: 112.5%; // 1rem = 18px
+	}
+
+	// 640px
+	@media only screen and (max-width: 40em) {
+		font-size: 50%; // 1rem = 8px
+	}
 }
 
 body {

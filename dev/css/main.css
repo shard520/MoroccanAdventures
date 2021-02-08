@@ -144,10 +144,15 @@
   width: 80%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-template-rows: 1fr;
   gap: 1.5rem;
   padding: 1.5rem;
+}
+@media only screen and (max-width: 26.25em) {
+  .landscape-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
 }
 .landscape-gallery__item {
   display: flex;
@@ -186,7 +191,7 @@
   padding: 1.5rem;
 }
 .page-links__container {
-  width: 44.44rem;
+  width: 44.44444rem;
   height: 25rem;
   margin: auto;
   margin-bottom: 6rem;
@@ -194,6 +199,12 @@
   box-shadow: 0.6rem 0.6rem 12rem 1rem rgba(var(--black-color-rgb), 0.75) inset, -0.6rem -0.6rem 12rem 1rem rgba(var(--black-color-rgb), 0.75) inset, 0.3rem 0.3rem 0.3rem rgba(var(--black-color-rgb), 0.5);
   overflow: hidden;
   position: relative;
+}
+@media only screen and (max-width: 40em) {
+  .page-links__container {
+    width: 35.55555rem;
+    height: 20rem;
+  }
 }
 .page-links__container:last-child {
   margin-bottom: 3rem;
@@ -254,14 +265,14 @@
   --flag-red-color-rgb: 193, 39, 45;
   --flag-green-color: #006233;
   --flag-green-color-rgb: 0, 98, 51;
-  --light-grey-accent: #d3d3d3;
-  --light-grey-accent-rgb: 211, 211, 211;
+  --light-grey-accent: #c8c8c8;
+  --light-grey-accent-rgb: 200, 200, 200;
   --dark-grey-accent: #7a7673;
   --dark-grey-accent-rgb: 122, 118, 115;
   --black-color: #3B3937;
   --black-color-rgb: 59, 57, 55;
-  --white-color: #fbf3ed;
-  --white-color-rgb: 251, 243, 237;
+  --white-color: #fff8f2;
+  --white-color-rgb: 255, 248, 242;
 }
 
 *,
@@ -274,6 +285,16 @@
 
 html {
   font-size: 62.5%;
+}
+@media only screen and (min-width: 180em) and (max-width: 240em) {
+  html {
+    font-size: 112.5%;
+  }
+}
+@media only screen and (max-width: 40em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
