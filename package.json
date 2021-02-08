@@ -14,10 +14,5 @@
     "url": "https://github.com/shard520/MoroccanAdventures/issues"
   },
   "homepage": "https://github.com/shard520/MoroccanAdventures#readme",
-  "devDependencies": {
-    "fs": "0.0.1-security",
-    "imagemin": "^7.0.1",
-    "imagemin-webp": "^6.0.0",
-    "path": "^0.12.7"
-  }
+  "devDependencies": {}
 }

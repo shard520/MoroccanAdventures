@@ -1,14 +1,58 @@
 // convert all jpg files to various predefined widths with quality set to 70
 // strip metadata, append width to file name and put them in relevant folder
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 4000 -set filename:fname '%t_4000w' +adjoin '4k/%[filename:fname].jpg';
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 -set filename:fname '%t_2000w' +adjoin '1080/%[filename:fname].jpg';
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 -set filename:fname '%t_1000w' +adjoin 'tablet/%[filename:fname].jpg';
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname '%t_500w' +adjoin 'phone/%[filename:fname].jpg'
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 4000 -set filename:fname '%t_4000w' +adjoin './4k/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 -set filename:fname '%t_2000w' +adjoin './1080/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 -set filename:fname '%t_1000w' +adjoin './tablet/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname '%t_500w' +adjoin './phone/%[filename:fname].jpg'
 
 // convert all jpg files to various predefined widths with quality set to 70
 // number output file names sequentially with 2 digits starting from 01
 // strip metadata, add width to file name and put them in relevant folder
-magick convert -scene 1 *.JPG -quality 70 -resize 2000 '2000/%02d_2000w.jpg';
-magick convert -scene 1 *.JPG -quality 70 -resize 1000 '1000/%02d_1000w.jpg';
-magick convert -scene 1 *.JPG -quality 70 -resize 500 '500/%02d_500w.jpg';
-magick convert -scene 1 *.JPG -quality 70 -resize 250 '250/%02d_250w.jpg'
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 '2000/%02d_2000w.jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 '1000/%02d_1000w.jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 '500/%02d_500w.jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 250 '250/%02d_250w.jpg'
+
+// convert jpg to webp at original resolution and strip metadata
+magick convert -scene 1 *.JPG -strip '../webp/%02d.webp'
+
+// convert jpg to webp at original resolution and strip metadata while keeping orientation the same
+magick convert -scene 1 *.JPG -auto-orient -strip '../../webp/chefchaouen/%02d.webp'
+
+// batch convert headers to jpg and webp from original resolution headers folder
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 4000 -set filename:fname '%t_4000w' +adjoin './4k/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 -set filename:fname '%t_2000w' +adjoin './1080/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 -set filename:fname '%t_1000w' +adjoin './tablet/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname '%t_500w' +adjoin './phone/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 4000 -set filename:fname '%t_4000w' +adjoin '../../webp/headers/4k/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 -set filename:fname '%t_2000w' +adjoin '../../webp/headers/1080/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 -set filename:fname '%t_1000w' +adjoin '../../webp/headers/tablet/%[filename:fname].jpg' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname '%t_500w' +adjoin '../../webp/headers/phone/%[filename:fname].jpg'
+
+// batch convert all gallery images to webp from original resolution jpg folder
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 2000 '../webp/chefchaouen/2000/%02d_2000w.webp' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 1000 '../webp/chefchaouen/1000/%02d_1000.webp' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 500 '../webp/chefchaouen/500/%02d_500w.webp' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 250 '../webp/chefchaouen/250/%02d_250w.webp' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 2000 '../webp/ait_benhaddou/2000/%02d_2000w.webp' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 1000 '../webp/ait_benhaddou/1000/%02d_1000.webp' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 500 '../webp/ait_benhaddou/500/%02d_500w.webp' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 250 '../webp/ait_benhaddou/250/%02d_250w.webp' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 2000 '../webp/erg_chebbi/2000/%02d_2000w.webp' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 1000 '../webp/erg_chebbi/1000/%02d_1000.webp' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 500 '../webp/erg_chebbi/500/%02d_500w.webp' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 250 '../webp/erg_chebbi/250/%02d_250w.webp'
+
+// batch convert all gallery images to jpg from original resolution jpg folder
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 2000 './chefchaouen/2000/%02d_2000w.jpg' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 1000 './chefchaouen/1000/%02d_1000.jpg' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 500 './chefchaouen/500/%02d_500w.jpg' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 250 './chefchaouen/250/%02d_250w.jpg' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 2000 './ait_benhaddou/2000/%02d_2000w.jpg' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 1000 './ait_benhaddou/1000/%02d_1000.jpg' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 500 './ait_benhaddou/500/%02d_500w.jpg' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 250 './ait_benhaddou/250/%02d_250w.jpg' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 2000 './erg_chebbi/2000/%02d_2000w.jpg' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 1000 './erg_chebbi/1000/%02d_1000.jpg' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 500 './erg_chebbi/500/%02d_500w.jpg' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 250 './erg_chebbi/250/%02d_250w.jpg'
