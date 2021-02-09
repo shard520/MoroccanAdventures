@@ -65,7 +65,7 @@
 		// Select all links in navigation
 		const navLinks = document.querySelectorAll('.navigation__link');
 		// Select all tabbable elements
-		const tabbableElements = document.querySelectorAll('.page-links__link, .footer__link');
+		const tabbableElements = document.querySelectorAll('.page-links__link, .footer__link, .landscape-gallery__link');
 		// Select current page nav link
 		const highlighted = document.querySelector('.navigation__link--highlight')
 

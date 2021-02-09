@@ -9,9 +9,9 @@
 		margin: auto;
 		margin-bottom: 6rem;
 		border-radius: 10%;
-		box-shadow: .6rem .6rem 12rem 1rem rgba(var(--black-color-rgb),.75) inset,
-					-.6rem -.6rem 12rem 1rem rgba(var(--black-color-rgb),.75) inset, 
-					.3rem .3rem .3rem rgba(var(--black-color-rgb),.5);
+		box-shadow: .6rem .6rem 12rem 1rem rgba(0,0,0,.75) inset,
+					-.6rem -.6rem 12rem 1rem rgba(0,0,0,.75) inset, 
+					.3rem .3rem 1rem rgba(0,0,0,.3);
 		overflow: hidden;
 		position: relative;
 

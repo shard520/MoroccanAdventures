@@ -155,9 +155,21 @@
   }
 }
 .landscape-gallery__item {
-  display: flex;
   position: relative;
   margin: 0;
+  perspective: 100rem;
+  height: 100%;
+  z-index: 1;
+  transition: z-index 2s;
+}
+.landscape-gallery__item:hover, .landscape-gallery__item:focus-within {
+  z-index: 10;
+}
+.landscape-gallery__item:hover .landscape-gallery__container, .landscape-gallery__item:focus-within .landscape-gallery__container {
+  transform: rotateY(-180deg);
+}
+.landscape-gallery__item:hover .landscape-gallery__caption, .landscape-gallery__item:focus-within .landscape-gallery__caption {
+  transform: rotateY(0);
 }
 .landscape-gallery__item::before {
   content: "";
@@ -166,24 +178,58 @@
   width: 0;
   padding-bottom: calc(2/3 * 100%);
 }
-.landscape-gallery__image {
+.landscape-gallery__container, .landscape-gallery__image, .landscape-gallery__caption {
   width: 100%;
-  height: 100%;
+  height: inherit;
   position: absolute;
   top: 0;
   left: 0;
+}
+.landscape-gallery__container {
+  transition: all 0.8s;
+}
+.landscape-gallery__image {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   display: block;
   border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
 }
 .landscape-gallery__caption {
-  display: none;
+  display: grid;
+  place-content: center;
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.8s;
+  will-change: transform;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@supports ((-webkit-backdrop-filter: blur(0.3rem)) or (backdrop-filter: blur(0.3rem))) {
+  .landscape-gallery__caption {
+    -webkit-backdrop-filter: blur(0.3rem) brightness(0.8);
+            backdrop-filter: blur(0.3rem) brightness(0.8);
+    background-color: transparent;
+  }
 }
 .landscape-gallery__link {
-  display: none;
+  font-family: "Bitter", serif;
+  font-size: 3rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+.landscape-gallery__link:link, .landscape-gallery__link:visited {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.landscape-gallery__link:hover, .landscape-gallery__link:focus {
+  transform: translateY(-0.2rem);
+}
+.landscape-gallery__link:focus {
+  outline: none;
 }
 
 .page-links {
@@ -196,7 +242,7 @@
   margin: auto;
   margin-bottom: 6rem;
   border-radius: 10%;
-  box-shadow: 0.6rem 0.6rem 12rem 1rem rgba(var(--black-color-rgb), 0.75) inset, -0.6rem -0.6rem 12rem 1rem rgba(var(--black-color-rgb), 0.75) inset, 0.3rem 0.3rem 0.3rem rgba(var(--black-color-rgb), 0.5);
+  box-shadow: 0.6rem 0.6rem 12rem 1rem rgba(0, 0, 0, 0.75) inset, -0.6rem -0.6rem 12rem 1rem rgba(0, 0, 0, 0.75) inset, 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
 }
