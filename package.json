@@ -14,5 +14,7 @@
     "url": "https://github.com/shard520/MoroccanAdventures/issues"
   },
   "homepage": "https://github.com/shard520/MoroccanAdventures#readme",
-  "devDependencies": {}
+  "dependencies": {
+    "parvus": "^1.2.0"
+  }
 }

@@ -374,6 +374,10 @@ body {
   text-align: center !important;
 }
 
+.u-no-display {
+  display: none !important;
+}
+
 .footer {
   padding: 1.5rem;
   background-color: var(--light-grey-accent);
