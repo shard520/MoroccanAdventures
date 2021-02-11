@@ -1,6 +1,7 @@
 .landscape-gallery {
 	width: $page-width;
 	margin: auto;
+	margin-bottom: 1.5rem;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	grid-template-rows: 1fr;

@@ -32,27 +32,27 @@ magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname
 // batch convert all gallery images to webp from original resolution jpg folder
 magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 2000 '../webp/chefchaouen/2000/%02d_2000w.webp' &&
 magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 1000 '../webp/chefchaouen/1000/%02d_1000w.webp' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 750 '../webp/chefchaouen/750/%02d_750w.webp' &&
 magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 500 '../webp/chefchaouen/500/%02d_500w.webp' &&
-magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 250 '../webp/chefchaouen/250/%02d_250w.webp' &&
 magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 2000 '../webp/ait_benhaddou/2000/%02d_2000w.webp' &&
 magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 1000 '../webp/ait_benhaddou/1000/%02d_1000w.webp' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 750 '../webp/ait_benhaddou/750/%02d_750w.webp' &&
 magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 500 '../webp/ait_benhaddou/500/%02d_500w.webp' &&
-magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 250 '../webp/ait_benhaddou/250/%02d_250w.webp' &&
 magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 2000 '../webp/erg_chebbi/2000/%02d_2000w.webp' &&
 magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 1000 '../webp/erg_chebbi/1000/%02d_1000w.webp' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 750 '../webp/erg_chebbi/750/%02d_750w.webp'
 magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 500 '../webp/erg_chebbi/500/%02d_500w.webp' &&
-magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 250 '../webp/erg_chebbi/250/%02d_250w.webp'
 
 // batch convert all gallery images to jpg from original resolution jpg folder
 magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 2000 './chefchaouen/2000/%02d_2000w.jpg' &&
 magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 1000 './chefchaouen/1000/%02d_1000w.jpg' &&
+magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 750 './chefchaouen/750/%02d_750w.jpg' &&
 magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 500 './chefchaouen/500/%02d_500w.jpg' &&
-magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 250 './chefchaouen/250/%02d_250w.jpg' &&
 magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 2000 './ait_benhaddou/2000/%02d_2000w.jpg' &&
 magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 1000 './ait_benhaddou/1000/%02d_1000w.jpg' &&
+magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 750 './ait_benhaddou/750/%02d_750w.jpg' &&
 magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 500 './ait_benhaddou/500/%02d_500w.jpg' &&
-magick convert -scene 1 './ait_benhaddou/*.JPG' -strip -quality 70 -resize 250 './ait_benhaddou/250/%02d_250w.jpg' &&
 magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 2000 './erg_chebbi/2000/%02d_2000w.jpg' &&
 magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 1000 './erg_chebbi/1000/%02d_1000w.jpg' &&
+magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 750 './erg_chebbi/750/%02d_750w.jpg
 magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 500 './erg_chebbi/500/%02d_500w.jpg' &&
-magick convert -scene 1 './erg_chebbi/*.JPG' -strip -quality 70 -resize 250 './erg_chebbi/250/%02d_250w.jpg'

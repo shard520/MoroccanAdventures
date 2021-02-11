@@ -6,8 +6,8 @@
   --button-color: hsl(0, 0%, 100%);
   --loader-background-color: hsl(23, 40%, 96%);
   --loader-color: hsl(228, 24%, 23%);
-  --image-max-height: 95vh;
-  --image-max-width: 95vw; }
+  --image-max-height: 90vh;
+  --image-max-width: 90vw; }
 
 /**
  * Parvus trigger
