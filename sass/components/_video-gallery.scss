@@ -1,6 +1,5 @@
 .video-gallery {
 	margin: auto;
-	margin-bottom: 3rem;
 	padding: 1.5rem;
     display: flex;
     justify-content: center;
@@ -12,6 +11,29 @@
 		flex: 1;
 		display: flex;
 		justify-content: center;
+		margin-bottom: 3rem;
+
+		&::before {
+			content: "";
+			width: 1px;
+			margin-left: -1px;
+			float: left;
+			height: 0;
+			padding-top: calc(9 / 16 * 100%);
+		}
+
+		&::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		@supports (aspect-ratio: 16/9) {
+			&::before,
+			&::after {
+				content: none;
+			}
+		}
 
 		//825px
 		@media only screen and (max-width: 51.5625em) {
@@ -20,22 +42,14 @@
 	}
 	
 	&__video {
-		width: 56rem;
-		height: 31.5rem;
+		width: 100%;
+		height: auto;
 		border: none;
 		border-radius: 2rem;
 		box-shadow: .2rem .2rem 1rem rgba(0,0,0,.2);
 
-		// 470px
-		@media only screen and (max-width: 29.375em) {
-			width: 30rem;
-			height: 16.875rem;
-		}
-
 
 		@supports (aspect-ratio: 16/9) {
-			width: 100%;
-			height: auto;
 			aspect-ratio: 16/9;
 		}
 	}
