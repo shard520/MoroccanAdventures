@@ -272,6 +272,123 @@
   outline: none;
 }
 
+.mixed-gallery {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  gap: 1.5rem;
+}
+.mixed-gallery__item {
+  position: relative;
+  margin: 0;
+  perspective: 100rem;
+  height: 100%;
+  z-index: 1;
+  transition: z-index 2s;
+}
+.mixed-gallery__item--1 {
+  grid-area: 1/1/span 4/span 2;
+}
+.mixed-gallery__item--2 {
+  grid-area: 1/3/span 3/span 3;
+}
+.mixed-gallery__item--3 {
+  grid-area: 1/6/span 2/span 1;
+}
+.mixed-gallery__item--4 {
+  grid-area: 1/7/span 2/span 1;
+}
+.mixed-gallery__item--5 {
+  grid-area: 1/8/span 5/span 2;
+}
+.mixed-gallery__item--6 {
+  grid-area: 3/6/span 3/span 2;
+}
+.mixed-gallery__item--7 {
+  grid-area: 4/3/span 2/span 2;
+}
+.mixed-gallery__item--8 {
+  grid-area: 4/5/span 2/span 1;
+}
+.mixed-gallery__item--9 {
+  grid-area: 5/1/span 4/span 2;
+}
+.mixed-gallery__item--10 {
+  grid-area: 6/3/span 3/span 1;
+}
+.mixed-gallery__item--11 {
+  grid-area: 6/7/span 3/span 3;
+}
+.mixed-gallery__item--12 {
+  grid-area: 6/4/span 3/span 3;
+}
+.mixed-gallery__item:hover, .mixed-gallery__item:focus-within {
+  z-index: 10;
+}
+.mixed-gallery__item:hover .mixed-gallery__container, .mixed-gallery__item:focus-within .mixed-gallery__container {
+  transform: rotateY(-180deg);
+}
+.mixed-gallery__item:hover .mixed-gallery__caption, .mixed-gallery__item:focus-within .mixed-gallery__caption {
+  transform: rotateY(0);
+}
+.mixed-gallery__container, .mixed-gallery__image, .mixed-gallery__caption {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mixed-gallery__container {
+  transition: all 0.8s;
+}
+.mixed-gallery__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
+}
+.mixed-gallery__caption {
+  display: grid;
+  place-content: center;
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.8s;
+  will-change: transform;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@supports ((-webkit-backdrop-filter: blur(0.3rem)) or (backdrop-filter: blur(0.3rem))) {
+  .mixed-gallery__caption {
+    -webkit-backdrop-filter: blur(0.3rem) brightness(0.8);
+            backdrop-filter: blur(0.3rem) brightness(0.8);
+    background-color: transparent;
+  }
+}
+.mixed-gallery__link {
+  font-family: "Bitter", serif;
+  font-size: 3rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+.mixed-gallery__link:link, .mixed-gallery__link:visited {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.mixed-gallery__link:hover, .mixed-gallery__link:focus {
+  transform: translateY(-0.2rem);
+}
+.mixed-gallery__link:focus {
+  outline: none;
+}
+
 .page-links {
   margin: 1.5rem auto;
   padding: 1.5rem;
@@ -667,5 +784,153 @@ body {
   }
   .navigation__checkbox:checked ~ .navigation__menu {
     transform: translateY(0);
+  }
+}
+
+body.chefchaouen {
+  background-color: var(--secondary-color);
+}
+
+:root {
+  --transition-duration: 300ms;
+  --transition-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+  --overlay-background: rgba(var(--black-color-rgb), .7);
+  --button-background-color: var(--dark-grey-accent);
+  --button-color: var(--white-color);
+  --loader-background-color: var(--white-color);
+  --loader-color: var(--black-color);
+  --image-max-height: 90vh;
+  --image-max-width: 90vw;
+}
+
+/**
+ * Parvus trigger
+ *
+ */
+.parvus-zoom {
+  display: block;
+  position: relative;
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+  will-change: transform;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .parvus-zoom:active {
+    transform: scale(1.04);
+  }
+}
+.parvus-zoom__indicator {
+  display: none;
+}
+
+/**
+ * Parvus
+ *
+ */
+.parvus {
+  align-items: center;
+  bottom: 0;
+  contain: strict;
+  display: flex;
+  font-size: 1.125rem;
+  justify-content: center;
+  left: 0;
+  line-height: 1.667;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1337;
+}
+.parvus[aria-hidden=true] {
+  display: none;
+}
+.parvus__overlay {
+  background-color: var(--overlay-background);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  will-change: opacity;
+}
+.parvus__image {
+  will-change: transform;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .parvus__image:not(.parvus__image--is-dragging) {
+    transition: transform var(--transition-duration) var(--transition-timing-function);
+  }
+}
+.parvus__image img {
+  display: block;
+  height: auto;
+  max-height: var(--image-max-height);
+  max-width: var(--image-max-width);
+  transform-origin: left top;
+  width: auto;
+}
+.parvus__loader {
+  display: inline-block;
+  height: 6.25rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6.25rem;
+}
+.parvus__loader::before {
+  -webkit-animation: spin 1s infinite;
+          animation: spin 1s infinite;
+  border-radius: 100%;
+  border: 0.25rem solid var(--loader-background-color);
+  border-top-color: var(--loader-color);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.parvus__btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--button-background-color);
+  background-image: none;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid transparent;
+  color: var(--button-color);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  padding: 0.5rem;
+  touch-action: manipulation;
+}
+.parvus__btn--close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.parvus__btn svg {
+  fill: none;
+  height: 3rem;
+  pointer-events: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1;
+  stroke: currentColor;
+  width: 3rem;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=main.css.map */
