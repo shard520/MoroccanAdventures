@@ -1,0 +1,40 @@
+.film-list {
+	column-count: 2;
+	font-size: $default-font-size;
+	margin: auto;
+
+	// 420px
+	@media (max-width: 26.25em) {
+		column-count: 1;
+	}
+
+	&__container {
+		width: $page-width;
+		margin: auto;
+		margin-bottom: 1.5rem;
+		padding: 1.5rem;
+		display: flex;
+	}
+
+	&__item {
+		margin: 1rem 2rem;
+		list-style: none;
+		position: relative;
+		
+		&:first-of-type {
+			margin-top: 0;
+		}
+		
+		&::before {
+			content: "";
+			display: inline-block;
+			height: 1.6rem;
+			width: 1.6rem; 
+			background-image: url(../../img/Moroccan_Star.svg);
+			background-size: cover;
+			position: absolute;
+			top: 0.1rem;
+			left: -2rem;
+		}
+	}
+}

@@ -25,6 +25,45 @@
   outline: none;
 }
 
+.film-list {
+  -moz-column-count: 2;
+       column-count: 2;
+  font-size: 1.6rem;
+  margin: auto;
+}
+@media (max-width: 26.25em) {
+  .film-list {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
+.film-list__container {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+}
+.film-list__item {
+  margin: 1rem 2rem;
+  list-style: none;
+  position: relative;
+}
+.film-list__item:first-of-type {
+  margin-top: 0;
+}
+.film-list__item::before {
+  content: "";
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-image: url(../../img/Moroccan_Star.svg);
+  background-size: cover;
+  position: absolute;
+  top: 0.1rem;
+  left: -2rem;
+}
+
 .form__container {
   width: 80%;
   margin: 1.5rem auto;
@@ -430,6 +469,10 @@ body {
   display: none !important;
 }
 
+.u-margin-bottom-md {
+  margin-bottom: 4.5rem !important;
+}
+
 .footer {
   padding: 1.5rem;
   background-color: var(--light-grey-accent);
@@ -460,10 +503,16 @@ body {
   z-index: 200;
 }
 .header--home {
-  background-image: url("../../images/home-header.jpg");
+  background-image: url("../../img/jpg/headers/4k/home_header_4000w.jpg");
 }
 .header--erg-chebbi {
-  background-image: url("../../img/jpg/headers/1080/erg_header_2000w.jpg");
+  background-image: url("../../img/jpg/headers/4k/erg_header_4000w.jpg");
+}
+.header--ait-benhaddou {
+  background-image: url("../../img/jpg/headers/4k/ait_header_4000w.jpg");
+}
+.header--chefchaouen {
+  background-image: url("../../img/jpg/headers/4k/chef_header_4000w.jpg");
 }
 
 .navigation {

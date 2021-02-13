@@ -10,10 +10,18 @@
 	z-index: 200;
 	
 	&--home {
-		background-image: url("../../images/home-header.jpg");
+		background-image: url("../../img/jpg/headers/4k/home_header_4000w.jpg");
 	}
 
 	&--erg-chebbi {
-		background-image: url("../../img/jpg/headers/1080/erg_header_2000w.jpg");
+		background-image: url("../../img/jpg/headers/4k/erg_header_4000w.jpg");
+	}
+
+	&--ait-benhaddou {
+		background-image: url("../../img/jpg/headers/4k/ait_header_4000w.jpg");
+	}
+
+	&--chefchaouen {
+		background-image: url("../../img/jpg/headers/4k/chef_header_4000w.jpg");
 	}
 }
