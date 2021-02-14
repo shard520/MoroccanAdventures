@@ -58,7 +58,7 @@
 	}
 
 	&__container {
-		transition: all .8s;
+		transition: all .8s ease-in-out;
 	}
 
 	&__image {
@@ -67,6 +67,7 @@
 		display: block;
 		border-radius: 2rem;
 		box-shadow: .2rem .2rem 1rem rgba(0,0,0,.2);
+		transform: rotateY(0);
 	}
 
 	&__caption {
@@ -74,7 +75,7 @@
 		place-content: center;
 		transform: rotateY(180deg);
 		backface-visibility: hidden;
-		transition: all .8s;
+		transition: all .8s ease-in-out;
 		will-change: transform; // Fix for animation bug in Chrome rendering a black 'shadow' behind link text whilst transforming
     	border-radius: 2rem;
 		background-color: rgba(0,0,0,.5);

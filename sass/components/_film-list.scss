@@ -4,7 +4,7 @@
 	margin: auto;
 
 	// 420px
-	@media (max-width: 26.25em) {
+	@media only screen and (max-width: 26.25em) {
 		column-count: 1;
 	}
 
