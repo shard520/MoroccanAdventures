@@ -24,10 +24,10 @@ magick convert -scene 1 *.JPG -strip -quality 70 -resize 4000 -set filename:fnam
 magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 -set filename:fname '%t_2000w' +adjoin './1080/%[filename:fname].jpg' &&
 magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 -set filename:fname '%t_1000w' +adjoin './tablet/%[filename:fname].jpg' &&
 magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname '%t_500w' +adjoin './phone/%[filename:fname].jpg' &&
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 4000 -set filename:fname '%t_4000w' +adjoin '../../webp/headers/4k/%[filename:fname].jpg' &&
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 -set filename:fname '%t_2000w' +adjoin '../../webp/headers/1080/%[filename:fname].jpg' &&
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 -set filename:fname '%t_1000w' +adjoin '../../webp/headers/tablet/%[filename:fname].jpg' &&
-magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname '%t_500w' +adjoin '../../webp/headers/phone/%[filename:fname].jpg'
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 4000 -set filename:fname '%t_4000w' +adjoin '../../webp/headers/4k/%[filename:fname].webp' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 2000 -set filename:fname '%t_2000w' +adjoin '../../webp/headers/1080/%[filename:fname].webp' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 1000 -set filename:fname '%t_1000w' +adjoin '../../webp/headers/tablet/%[filename:fname].webp' &&
+magick convert -scene 1 *.JPG -strip -quality 70 -resize 500 -set filename:fname '%t_500w' +adjoin '../../webp/headers/phone/%[filename:fname].webp'
 
 // batch convert all gallery images to webp from original resolution jpg folder
 magick convert -scene 1 './chefchaouen/*.JPG' -auto-orient -strip -quality 70 -resize 2000 '../webp/chefchaouen/2000/%02d_2000w.webp' &&

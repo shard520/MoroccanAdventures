@@ -9,19 +9,131 @@
 	position: relative;
 	z-index: 200;
 	
-	&--home {
-		background-image: url("../../img/jpg/headers/4k/home_header_4000w.jpg");
-	}
+	.no-webp &--ait-benhaddou {
+		background-image: url("../../img/jpg/headers/smallest/ait_header_500w.jpg");
 
-	&--erg-chebbi {
-		background-image: url("../../img/jpg/headers/4k/erg_header_4000w.jpg");
+		@include background-respond(large) {
+			background-image: url("../../img/jpg/headers/large/ait_header_4000w.jpg");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/jpg/headers/medium/ait_header_2000w.jpg");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/jpg/headers/small/ait_header_1000w.jpg");
+		}
 	}
 
 	&--ait-benhaddou {
-		background-image: url("../../img/jpg/headers/4k/ait_header_4000w.jpg");
+		background-image: url("../../img/webp/headers/smallest/ait_header_500w.webp");
+
+		@include background-respond(large) {
+			background-image: url("../../img/webp/headers/large/ait_header_4000w.webp");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/webp/headers/medium/ait_header_2000w.webp");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/webp/headers/small/ait_header_1000w.webp");
+		}
+	}
+
+	.no-webp &--chefchaouen {
+		background-image: url("../../img/jpg/headers/smallest/chef_header_500w.jpg");
+
+		@include background-respond(large) {
+			background-image: url("../../img/jpg/headers/large/chef_header_4000w.jpg");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/jpg/headers/medium/chef_header_2000w.jpg");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/jpg/headers/small/chef_header_1000w.jpg");
+		}
 	}
 
 	&--chefchaouen {
-		background-image: url("../../img/jpg/headers/4k/chef_header_4000w.jpg");
+		background-image: url("../../img/webp/headers/smallest/chef_header_500w.webp");
+
+		@include background-respond(large) {
+			background-image: url("../../img/webp/headers/large/chef_header_4000w.webp");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/webp/headers/medium/chef_header_2000w.webp");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/webp/headers/small/chef_header_1000w.webp");
+		}
+	}
+
+	.no-webp &--erg-chebbi {
+		background-image: url("../../img/jpg/headers/smallest/erg_header_500w.jpg");
+
+		@include background-respond(large) {
+			background-image: url("../../img/jpg/headers/large/erg_header_4000w.jpg");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/jpg/headers/medium/erg_header_2000w.jpg");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/jpg/headers/small/erg_header_1000w.jpg");
+		}
+	}
+
+	&--erg-chebbi {
+		background-image: url("../../img/webp/headers/smallest/erg_header_500w.webp");
+
+		@include background-respond(large) {
+			background-image: url("../../img/webp/headers/large/erg_header_4000w.webp");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/webp/headers/medium/erg_header_2000w.webp");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/webp/headers/small/erg_header_1000w.webp");
+		}
+	}
+
+	.no-webp &--home {
+		background-image: url("../../img/jpg/headers/smallest/home_header_500w.jpg");
+
+		@include background-respond(large) {
+			background-image: url("../../img/jpg/headers/large/home_header_4000w.jpg");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/jpg/headers/medium/home_header_2000w.jpg");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/jpg/headers/small/home_header_1000w.jpg");
+		}
+	}
+
+	&--home {
+		background-image: url("../../img/webp/headers/smallest/home_header_500w.webp");
+
+		@include background-respond(large) {
+			background-image: url("../../img/webp/headers/large/home_header_4000w.webp");
+		}
+
+		@include background-respond(medium) {
+			background-image: url("../../img/webp/headers/medium/home_header_2000w.webp");
+		}
+
+		@include background-respond(small) {
+			background-image: url("../../img/webp/headers/small/home_header_1000w.webp");
+		}
 	}
 }

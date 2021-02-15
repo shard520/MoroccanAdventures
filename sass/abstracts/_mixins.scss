@@ -1,0 +1,24 @@
+@mixin background-respond($bg-breakpoint) {
+	@if $bg-breakpoint == large {
+		@media only screen and (min-width: 2000px) and (min-resolution: 96dpi),
+			   only screen and (min-width: 2000px) and (min-device-pixel-ratio: 1) {
+			@content
+		}; // screens larger than 2000px
+	}
+	@if $bg-breakpoint == medium {
+		@media only screen and (min-width: 1000px) and (max-width: 2000px) and (min-resolution: 96dpi),
+			   only screen and (min-width: 500px) and (max-width: 1000px) and (min-resolution: 192dpi),
+			   only screen and (min-width: 1000px) and (max-width: 2000px) and (min-device-pixel-ratio: 1),
+			   only screen and (min-width: 500px) and (max-width: 1000px) and (min-device-pixel-ratio: 2) {
+			@content
+		}; // Screens between 1000-2000px with DPR 1.0 or screens between 500-1000px with DPR 2.0+
+	}
+	@if $bg-breakpoint == small {
+		@media only screen and (min-width: 500px) and (max-width: 1000px) and (min-resolution: 96dpi),
+			   only screen and (min-width: 300px) and (max-width: 500px) and (min-resolution: 192dpi),
+			   only screen and (min-width: 500px) and (max-width: 1000px) and (min-device-pixel-ratio: 1),
+			   only screen and (min-width: 300px) and (max-width: 500px) and (min-device-pixel-ratio: 2) {
+			@content
+		}; // Screens between 500-1000px with DPR 1.0 or screens between 300-500px with DPR 2.0+
+	}
+}
