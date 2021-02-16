@@ -1104,14 +1104,14 @@ body {
     z-index: 100;
   }
   .navigation__menu {
-    transform: translateY(-125%);
+    transform: translateY(-300%);
     position: absolute;
     left: 0;
     top: 5rem;
     width: 100vw;
     background-color: var(--light-grey-accent);
     z-index: 99;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-out;
   }
   .navigation__list {
     flex-direction: column;

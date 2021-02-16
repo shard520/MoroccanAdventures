@@ -57,66 +57,66 @@
 
 		.no-webp &--erg-chebbi {
 			&::before {
-				background-image: url("../../img/jpg/headers/smallest/erg_header_500w.jpg");
+				background-image: url("../img/jpg/headers/smallest/erg_header_500w.jpg");
 
 				// container becomes larger than 500px wide at large breakpoint
 				@include background-respond(large) {
-					background-image: url("../../img/jpg/headers/small/erg_header_1000w.jpg");
+					background-image: url("../img/jpg/headers/small/erg_header_1000w.jpg");
 				}
 			}
 		}
 
 		&--erg-chebbi {
 			&::before {
-				background-image: url("../../img/webp/headers/smallest/erg_header_500w.webp");
+				background-image: url("../img/webp/headers/smallest/erg_header_500w.webp");
 
 				// container becomes larger than 500px wide at large breakpoint
 				@include background-respond(large) {
-					background-image: url("../../img/webp/headers/small/erg_header_1000w.webp");
+					background-image: url("../img/webp/headers/small/erg_header_1000w.webp");
 				}
 			}
 		}
 
 		.no-webp &--ait-benhaddou {
 			&::before {
-				background-image: url("../../img/jpg/headers/smallest/ait_header_500w.jpg");
+				background-image: url("../img/jpg/headers/smallest/ait_header_500w.jpg");
 
 				// container becomes larger than 500px wide at large breakpoint
 				@include background-respond(large) {
-					background-image: url("../../img/jpg/headers/small/ait_header_1000w.jpg");
+					background-image: url("../img/jpg/headers/small/ait_header_1000w.jpg");
 				}
 			}
 		}
 
 		&--ait-benhaddou {
 			&::before {
-				background-image: url("../../img/webp/headers/smallest/ait_header_500w.webp");
+				background-image: url("../img/webp/headers/smallest/ait_header_500w.webp");
 
 				// container becomes larger than 500px wide at large breakpoint
 				@include background-respond(large) {
-					background-image: url("../../img/webp/headers/small/ait_header_1000w.webp");
+					background-image: url("../img/webp/headers/small/ait_header_1000w.webp");
 				}
 			}
 		}
 
 		.no-webp &--chefchaouen {
 			&::before {
-				background-image: url("../../img/jpg/headers/smallest/chef_header_500w.jpg");
+				background-image: url("../img/jpg/headers/smallest/chef_header_500w.jpg");
 
 				// container becomes larger than 500px wide at large breakpoint
 				@include background-respond(large) {
-					background-image: url("../../img/jpg/headers/small/chef_header_1000w.jpg");
+					background-image: url("../img/jpg/headers/small/chef_header_1000w.jpg");
 				}
 			}
 		}
 
 		&--chefchaouen {
 			&::before {
-				background-image: url("../../img/webp/headers/smallest/chef_header_500w.webp");
+				background-image: url("../img/webp/headers/smallest/chef_header_500w.webp");
 
 				// container becomes larger than 500px wide at large breakpoint
 				@include background-respond(large) {
-					background-image: url("../../img/webp/headers/small/chef_header_1000w.webp");
+					background-image: url("../img/webp/headers/small/chef_header_1000w.webp");
 				}
 			}
 		}

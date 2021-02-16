@@ -10,7 +10,8 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<!-- Stylesheet -->
-	<link rel="stylesheet" href="./dev/css/main.css" type="text/css">
+	<link rel="preload" href="./css/main.css" as="style">
+	<link rel="stylesheet" href="./css/main.css" type="text/css">
 
 	<!-- Fonts -->
 	<link rel="preload" href="./fonts/bitter-v17-latin-200italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -27,7 +28,7 @@
 	</header>
 	<div class="navigation" aria-label="Site navigation">
 	</div>
-	<script src="./js/insertNav.js"></script>
+	<script src="./js/insertNav.min.js"></script>
 	<main class="main">
 		<article class="article">
 			<section class="intro" aria-label="page introduction text">
@@ -694,7 +695,7 @@
 		</article>
 	</main>
 	<footer class="footer"></footer>
-	<script src="./js/insertFooter.js"></script>
+	<script src="./js/insertFooter.min.js"></script>
 	<script src="./js/modernizr-custom.js"></script>
 	<script src="./js/parvus.min.js"></script>
 	<script>const prvs = new parvus();</script>

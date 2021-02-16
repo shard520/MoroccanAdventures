@@ -147,14 +147,14 @@
 		}
 
 		&__menu {
-			transform: translateY(-125%);
+			transform: translateY(-300%);
 			position: absolute;
 			left: 0;
 			top: 5rem;
 			width: 100vw;
 			background-color: var(--light-grey-accent);
 			z-index: 99;
-			transition: all .3s ease-in-out;
+			transition: all .3s ease-out;
 		}
 
 		&__list {
