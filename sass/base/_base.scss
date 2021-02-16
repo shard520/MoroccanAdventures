@@ -32,8 +32,8 @@
 html {
 	font-size: 62.5%; // 1rem = 10px
 
-	// Retina screens and 4k - 2880-3840px
-	@media only screen and (min-width: 180em) and (max-width: 240em) {
+	// Screens larger than 2880px (Retina and 4k)
+	@media only screen and (min-width: 180em) {
 		font-size: 112.5%; // 1rem = 18px
 	}
 
@@ -50,6 +50,14 @@ body {
 	line-height: 1.6;
 	color: var(--black-color);
 	background-color: var(--primary-color);
+	// Ensure footer is on the bottom regardless of how much content is on page
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1;
 }
 
 .sr-only {

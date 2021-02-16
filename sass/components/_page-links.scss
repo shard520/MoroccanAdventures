@@ -9,11 +9,10 @@
 		margin: auto;
 		margin-bottom: 6rem;
 		border-radius: 5rem;
-		box-shadow: .6rem .6rem 12rem 1rem rgba(0,0,0,.75) inset,
-					-.6rem -.6rem 12rem 1rem rgba(0,0,0,.75) inset, 
-					.3rem .3rem 1rem rgba(0,0,0,.3);
 		overflow: hidden;
 		position: relative;
+		// will-change needed to fix Safari bug not applying border-radius during transform
+		will-change: transform;
 
 		// 640px
 		@media only screen and (max-width: 40em) {
@@ -37,7 +36,23 @@
 			z-index: -1;
 			transform: translateZ(0px);
 			overflow: hidden;
-			border-radius: 5rem;
+			border-radius: inherit;
+		}
+
+		// Shadow needs to go here due to Safari bug not applying border-radius during transform
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			box-shadow: .6rem .6rem 12rem 1rem rgba(0,0,0,.75) inset,
+					-.6rem -.6rem 12rem 1rem rgba(0,0,0,.75) inset, 
+					.3rem .3rem 1rem rgba(0,0,0,.3);
+			z-index: 2;
+			overflow: hidden;
+			border-radius: inherit;
 		}
 
 		.no-webp &--erg-chebbi {
@@ -127,12 +142,13 @@
 			text-decoration: none;
 			text-shadow: .1rem .1rem .2rem var(--light-grey-accent);
 			transition: all .5s;
+			position: relative;
+			z-index: 3;
 		}
 
 
 		&:hover,
 		&:focus {
-			color: var(--light-grey-accent);
 			text-shadow: .1rem .1rem .2rem var(--dark-grey-accent);
 			transform: scale(1.05);	
 		}

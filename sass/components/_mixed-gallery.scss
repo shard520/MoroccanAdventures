@@ -10,8 +10,8 @@
 
 	// 1100px
 	@media only screen and (max-width: 68.75em) {
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(12, 7vw);
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(21, 8vw);
 	}
 
 	// 800px
@@ -42,13 +42,24 @@
 
 		&--3 {
 			grid-area: 1 / 6 / span 2 / span 1;
+
+			@media only screen and (max-width: 68.75em) {
+				grid-area: 16 / 1 / span 3 / span 2;
+			}
 		}
 
 		&--4 {
 			grid-area: 1 / 7 / span 2 / span 1;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 3 / 6 / span 2 / span 1;
+				grid-area: 14 / 3 / span 5 / span 1;
+			}
+
+			& > .mixed-gallery__caption > .mixed-gallery__link--small {
+				// 560px
+				@media only screen and (max-width: 35em) {
+					font-size: 1rem;
+				}
 			}
 		}
 
@@ -56,7 +67,7 @@
 			grid-area: 1 / 8 / span 5 / span 2;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 7 / 5 / span 4 / span 2;
+				grid-area: 12 / 1 / span 4 / span 2;
 			}
 		}
 
@@ -64,7 +75,7 @@
 			grid-area: 3 / 6 / span 3 / span 2;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 7 / 3 / span 3 / span 2;
+				grid-area: 4 / 3 / span 4 / span 3;
 			}
 		}
 
@@ -72,7 +83,7 @@
 			grid-area: 4 / 3 / span 2 / span 2;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 4 / 3 / span 3 / span 3;
+				grid-area: 8 / 3 / span 3 / span 3;
 			}
 		}
 
@@ -80,7 +91,7 @@
 			grid-area: 4 / 5 / span 2 / span 1;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 10 / 4 / span 3 / span 1;
+				grid-area: 14 / 4 / span 4 / span 2;
 
 				& > * > * {
 					object-position: right;
@@ -92,7 +103,7 @@
 			grid-area: 5 / 1 / span 4 / span 2;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 6 / 1 / span 4 / span 2;
+				grid-area: 6 / 1 / span 6 / span 2;
 			}
 		}
 
@@ -100,7 +111,7 @@
 			grid-area: 6 / 3 / span 3 / span 1;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 5 / 6 / span 2 / span 1;
+				grid-area: 18 / 4 / span 4 / span 2;
 			}
 		}
 
@@ -108,7 +119,7 @@
 			grid-area: 6 / 7 / span 3 / span 3;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 10 / 1 / span 3 / span 3;
+				grid-area: 11 / 3 / span 3 / span 3;
 			}
 		}
 
@@ -116,7 +127,7 @@
 			grid-area: 6 / 4 / span 3 / span 3;
 
 			@media only screen and (max-width: 68.75em) {
-				grid-area: 11 / 5 / span 2 / span 2;
+				grid-area: 19 / 1 / span 3 / span 3;
 			}
 		}
 
@@ -133,7 +144,7 @@
 
 		&:hover .mixed-gallery__caption,
 		&:focus-within .mixed-gallery__caption {
-			transform: rotateY(0);
+			transform: rotateY(0) translateZ(1px);
 		}
 
 	}
@@ -169,7 +180,7 @@
 	&__caption {
 		display: grid;
 		place-content: center;
-		transform: rotateY(180deg);
+		transform: rotateY(180deg) translateZ(1px);
 		backface-visibility: hidden;
 		transition: all .8s;
 		will-change: transform; // Fix for animation bug in Chrome rendering a black 'shadow' behind link text whilst transforming
@@ -211,11 +222,6 @@
 			// 1400px
 			@media only screen and (max-width: 87.5em) {
 				font-size: 1.5rem;
-			}
-
-			//560px
-			@media only screen and (max-width: 35em) {
-				font-size: .75rem;
 			}
 		}
 

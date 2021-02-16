@@ -11,12 +11,25 @@
 		padding: 1.5rem;
 		position: relative;
 
+		&--submit {
+			// 640px
+			@media only screen and (max-width: 40em) {
+				text-align: center;
+			}
+		}
+
 		&:first-child {
 			padding-top: 0;
 		}
 
 		&:last-child {
 			margin: 2.2rem auto 1rem;
+		}
+
+		// 640px
+		@media only screen and (max-width: 40em) {
+			width: 100%;
+    		padding: 1.5rem 0;
 		}
 	}
 
@@ -33,6 +46,7 @@
 		border-bottom: .2rem solid transparent; // Prevent box resizing when applying focus styling
 		border-top: .2rem solid transparent; // Offset border bottom to center text vertically
 		transition: all .3s;
+		background-clip: padding-box;
 
 		&:focus {
 			outline: none;
@@ -65,11 +79,21 @@
 		transition: all .3s;
 		transform: translateY(-8rem); //position labels above input field
 
+		// 640px
+		@media only screen and (max-width: 40em) {
+			transform: translateY(-7.5rem);
+		}
+
 		&--textarea {
 			// Position absolute to ensure label is correctly positioned if textarea is resized
 			position: absolute;
 			top: 0;
 			transform: translateY(-1.4rem);
+
+			// 640px
+			@media only screen and (max-width: 40em) {
+				transform: translateY(-1rem);
+			}
 		}
 	}
 
@@ -90,5 +114,10 @@
 		position: absolute;
 		top: 6.7rem;
 		font-size: 1rem;
+
+		// 400px
+		@media only screen and (max-width: 25em) {
+			font-size: .8rem;
+		}
 	}
 }
