@@ -5,6 +5,7 @@
 
 ![home header preview](https://raw.githubusercontent.com/shard520/readme_resources/main/MoroccanAdventures/img/home_header_preview.jpg)
 
+View the site on GitHub Pages [here.](https://shard520.github.io/MoroccanAdventures/)
 
 ## Contents
 
@@ -21,7 +22,7 @@
 
 This site was built to showcase some of the pictures taken during my trips to Morocco and to practice various CSS techniques and static site optimisations.
 
-The first version of the site was thrown together quite quickly using Bootstrap and with minimal thought to page load times, it's saved in the repo under the branch [site-v1](../tree/site-v1).
+The first version of the site was thrown together quite quickly using Bootstrap and with minimal thought to page load times, it's saved in the repo under the branch [site-v1](https://github.com/shard520/MoroccanAdventures/tree/site-v1).
 
 Version 2 contains a new set of images in webp and jpg format, optimised to various sizes using the ImageMagick CLI. 
 
@@ -75,7 +76,7 @@ Mobile nav menu was implemented with the checkbox hack with some javascript allo
     }));
 ```
 
-When the nav menu is open the nav links can be tabbed to and the page elements have their tab index removed, when the nav menu is closed this is reversed. The non-minified version of [insertNav.js](..dev/js/insertNav.js) is included in `dev/js/`
+When the nav menu is open the nav links can be tabbed to and the page elements have their tab index removed, when the nav menu is closed this is reversed. The non-minified version of [insertNav.js](https://github.com/shard520/MoroccanAdventures/blob/master/dev/js/insertNav.js) is included in `dev/js/`
 
 
 ---
@@ -83,7 +84,7 @@ When the nav menu is open the nav links can be tabbed to and the page elements h
 
 ## Dependencies
 
-The lightbox popups used in the image galleries use [Parvus](https://github.com/deoostfreese/Parvus) with some styling modifications, the SCSS partial is included in the [vendors](../tree/master/sass/vendors) folder. This was chosen because it's lightweight, accessible and has good cross browser compatibility.
+The lightbox popups used in the image galleries use [Parvus](https://github.com/deoostfreese/Parvus) with some styling modifications, the SCSS partial is included in the [vendors](https://github.com/shard520/MoroccanAdventures/tree/master/sass/vendors) folder. This was chosen because it's lightweight, accessible and has good cross browser compatibility.
 
 Modifications include changing color variables to match the close button with the colors used in the rest of the site. Triggering the lightbox is done via the text link so the zoom indicator is set to `display: none`.
 
