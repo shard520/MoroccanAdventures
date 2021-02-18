@@ -23,6 +23,8 @@
 			color: inherit;
 			text-decoration: none;
 			transition: all .2s;
+
+			@include reduce-motion;
 		}
 
 		&:hover,
@@ -88,6 +90,8 @@
 			background-color: var(--light-grey-accent);
 			transition: all .2s;
 
+			@include reduce-motion;
+
 			&:focus {
 				outline: none;
 			}
@@ -114,6 +118,8 @@
 			font-size: 1rem;
 			z-index: 101;
 			transition: all .3s;
+
+			@include reduce-motion;
 		
 			&::before,
 			&::after {
@@ -125,6 +131,8 @@
 				position: absolute;
 				z-index: 101;
 				transition: all .3s;
+
+				@include reduce-motion;
 			}
 		
 			&::before { transform: translateY(-.9rem); }
@@ -155,6 +163,8 @@
 			background-color: var(--light-grey-accent);
 			z-index: 99;
 			transition: all .3s ease-out;
+
+			@include reduce-motion;
 		}
 
 		&__list {

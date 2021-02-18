@@ -48,6 +48,8 @@
 		transition: all .3s;
 		background-clip: padding-box;
 
+		@include reduce-motion;
+
 		&:focus {
 			outline: none;
 			box-shadow: 0 1rem 2rem rgba(var(--black-color-rgb), .25);
@@ -78,6 +80,8 @@
 		color: inherit;
 		transition: all .3s;
 		transform: translateY(-8rem); //position labels above input field
+
+		@include reduce-motion;
 
 		// 640px
 		@media only screen and (max-width: 40em) {

@@ -161,6 +161,8 @@
 
 	&__container {
 		transition: all .8s;
+
+		@include reduce-motion;
 	}
 
 	&__image {
@@ -187,6 +189,8 @@
     	border-radius: 2rem;
 		background-color: rgba(0,0,0,.5);
 
+		@include reduce-motion;
+
 		// 800px
 		@media only screen and (max-width: 50em) {
 			border-radius: 1.5rem;
@@ -205,6 +209,8 @@
 		transition: all .2s;
 		width: 90%;
 		margin: auto;
+
+		@include reduce-motion;
 
 		// 900px
 		@media only screen and (max-width: 56.25em) {

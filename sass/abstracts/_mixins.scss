@@ -22,3 +22,9 @@
 		}; // Screens between 500-1000px with DPR 1.0 or screens between 300-500px with DPR 2.0+
 	}
 }
+
+@mixin reduce-motion {
+	@media only screen and (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}

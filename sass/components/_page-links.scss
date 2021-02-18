@@ -37,6 +37,8 @@
 			transform: translateZ(0px);
 			overflow: hidden;
 			border-radius: inherit;
+
+			@include reduce-motion;
 		}
 
 		// Shadow needs to go here due to Safari bug not applying border-radius during transform
@@ -144,6 +146,8 @@
 			transition: all .5s;
 			position: relative;
 			z-index: 3;
+
+			@include reduce-motion;
 		}
 
 

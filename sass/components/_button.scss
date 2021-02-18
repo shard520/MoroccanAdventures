@@ -5,6 +5,8 @@
 	border: none;
 	cursor: pointer;
 	transition: all .2s;
+
+	@include reduce-motion;
 	
 	&--white {
 		background-color: var(--white-color);

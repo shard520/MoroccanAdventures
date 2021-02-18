@@ -59,6 +59,8 @@
 
 	&__container {
 		transition: all .8s ease-in-out;
+
+		@include reduce-motion;
 	}
 
 	&__image {
@@ -80,6 +82,8 @@
     	border-radius: 2rem;
 		background-color: rgba(0,0,0,.5);
 
+		@include reduce-motion;
+
 		@supports (-webkit-backdrop-filter: blur(.3rem)) or (backdrop-filter: blur(.3rem)) {
 			backdrop-filter: blur(.3rem) brightness(0.8);
 			background-color: transparent;
@@ -91,6 +95,8 @@
 		font-size: 3rem;
 		text-align: center;
 		transition: all .2s;
+
+		@include reduce-motion;
 
 		&:link,
 		&:visited {
